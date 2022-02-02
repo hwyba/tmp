@@ -6,7 +6,7 @@
 /*   By: hwsong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 20:15:25 by hwsong            #+#    #+#             */
-/*   Updated: 2022/01/31 20:27:01 by hwsong           ###   ########.fr       */
+/*   Updated: 2022/02/03 00:05:21 by hwsong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlen(char *s)
 
 char	*ft_strchr(char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)
@@ -69,7 +69,6 @@ char	*ft_strjoin(char *str, char *buff)
 	free(str);
 	return (s);
 }
-
 
 char	*ft_oneline(char *str)
 {
