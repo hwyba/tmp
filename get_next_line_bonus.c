@@ -15,21 +15,21 @@
 char	*ft_readstr(int fd, char *str)
 {
 	char	*buff;
-	int		rd_bytes;
+	int		rbytes;
 
 	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buff)
 		return (NULL);
-	rd_bytes = 1;
-	while (!ft_strchr(str, '\n') && rd_bytes != 0)
+	rbytes = 1;
+	while (!ft_strchr(str, '\n') && rbytes != 0)
 	{
-		rd_bytes = read(fd, buff, BUFFER_SIZE);
-		if (rd_bytes == -1)
+		rbytes = read(fd, buff, BUFFER_SIZE);
+		if (rbytes == -1)
 		{
 			free(buff);
 			return (NULL);
 		}
-		buff[rd_bytes] = '\0';
+		buff[rbytes] = '\0';
 		str = ft_strjoin(str, buff);
 	}
 	free(buff);
